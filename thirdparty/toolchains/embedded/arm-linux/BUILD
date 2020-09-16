@@ -64,3 +64,19 @@ cc_toolchain(
     supports_param_files = 1,
     toolchain_config = ":armhf_toolchain_config",
 )
+
+
+toolchain(
+    name = "aarch64-linux-crosstool",
+    exec_compatible_with = [
+        "@platforms//os:windows",
+        "@platforms//cpu:x86_64",
+    ],
+    target_compatible_with = [
+        "@platforms//os:linux",
+        "@platforms//cpu:aarch64",
+    ],
+    # No 64bit source is available, so we reuse the 32bit one.
+    toolchain = ":cc-compiler-aarch64",
+    toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
+)

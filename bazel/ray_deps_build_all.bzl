@@ -43,10 +43,3 @@ def ray_deps_build_all():
         armhf_repo = "../armhf_linux_toolchain",
   )
 
-  native.register_toolchains(
-        "//thirdparty/toolchains/embedded/arm-linux:aarch64-linux-crosstool",
-        # "@arm_none_eabi//toolchain:linux_x86_64",
-        # "@arm_none_eabi//toolchain:linux_aarch64",
-        # "@arm_none_eabi//toolchain:windows_x86_32",
-        # "@arm_none_eabi//toolchain:windows_x86_64",
-  )

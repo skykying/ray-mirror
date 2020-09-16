@@ -1,5 +1,4 @@
 load(":cc_config.bzl", "cc_toolchain_config")
-load("@rules_cc//cc:defs.bzl", "cc_toolchain", "cc_toolchain_suite")
 
 package(default_visibility = ["//visibility:public"])
 
@@ -80,4 +79,13 @@ toolchain(
     # No 64bit source is available, so we reuse the 32bit one.
     toolchain = ":cc-compiler-aarch64",
     toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
+)
+
+
+native.register_toolchains(
+        ":aarch64-linux-crosstool",
+        # "@arm_none_eabi//toolchain:linux_x86_64",
+        # "@arm_none_eabi//toolchain:linux_aarch64",
+        # "@arm_none_eabi//toolchain:windows_x86_32",
+        # "@arm_none_eabi//toolchain:windows_x86_64",
 )

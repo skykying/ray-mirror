@@ -42,3 +42,11 @@ def ray_deps_build_all():
         aarch64_repo = "../aarch64_linux_toolchain",
         armhf_repo = "../armhf_linux_toolchain",
   )
+
+  native.register_toolchains(
+        # "@arm_none_eabi//toolchain:macos_x86_64",
+        # "@arm_none_eabi//toolchain:linux_x86_64",
+        # "@arm_none_eabi//toolchain:linux_aarch64",
+        # "@arm_none_eabi//toolchain:windows_x86_32",
+        # "@arm_none_eabi//toolchain:windows_x86_64",
+  )

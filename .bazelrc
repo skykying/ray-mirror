@@ -27,8 +27,8 @@ test:windows --enable_runfiles
 
 
 
-build --incompatible_enable_cc_toolchain_resolution
-build --platforms=@com_github_ray_project_ray//platforms:linux_aarch64
+#build --incompatible_enable_cc_toolchain_resolution
+#build --platforms=@com_github_ray_project_ray//platforms:linux_aarch64
 
 
 # TODO(mehrdadn): Revert the "-\\.(asm|S)$" exclusion when this Bazel bug

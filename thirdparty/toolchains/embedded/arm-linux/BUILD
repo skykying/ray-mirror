@@ -1,4 +1,5 @@
 load(":cc_config.bzl", "cc_toolchain_config")
+load("@rules_cc//cc:defs.bzl", "cc_toolchain", "cc_toolchain_suite")
 
 package(default_visibility = ["//visibility:public"])
 

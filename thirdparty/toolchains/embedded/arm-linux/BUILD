@@ -33,14 +33,12 @@ filegroup(
     ],
 )
 
-cc_toolchain_config(
+cc_toolchain_aarch64_config(
     name = "aarch64_toolchain_config",
-    cpu = "aarch64",
 )
 
-cc_toolchain_config(
+cc_toolchain_armhf_config(
     name = "armhf_toolchain_config",
-    cpu = "armhf",
 )
 
 cc_toolchain(
@@ -84,3 +82,6 @@ toolchain(
 )
 
 
+native.register_toolchains(
+    ":aarch64-linux-crosstool",
+)

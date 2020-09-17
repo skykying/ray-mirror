@@ -1,4 +1,4 @@
-load(":armhf_linux_toolchain_configure.bzl", "arm_linux_toolchain_configure")
+load(":arm_linux_toolchain_configure.bzl", "arm_linux_toolchain_configure")
 load(":cc_config.bzl", "cc_toolchain_config")
 
 package(default_visibility = ["//visibility:public"])

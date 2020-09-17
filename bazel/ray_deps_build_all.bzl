@@ -8,13 +8,6 @@ load("@com_github_grpc_grpc//third_party/py:python_configure.bzl", "python_confi
 load("@com_github_grpc_grpc//bazel:grpc_deps.bzl", "grpc_deps")
 load("@rules_proto_grpc//:repositories.bzl", "rules_proto_grpc_toolchains")
 
-
-
-# Sanitize a dependency so that it works correctly from code that includes
-# TensorFlow as a submodule.
-def clean_dep(dep):
-    return str(Label(dep))
-
 def ray_deps_build_all():
   bazel_skylib_workspace()
   gen_java_deps()

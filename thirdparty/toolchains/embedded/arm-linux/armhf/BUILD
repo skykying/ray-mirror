@@ -51,7 +51,7 @@ toolchain(
     ],
     target_compatible_with = [
         "@platforms//os:linux",
-        "@platforms//cpu:armhf",
+        "@platforms//cpu:arm",
     ],
     # No 64bit source is available, so we reuse the 32bit one.
     toolchain = ":cc-compiler-armhf",

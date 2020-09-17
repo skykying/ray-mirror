@@ -2,7 +2,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive", "http_file"
 
 
 def ray_setup_toolchains():
-	http_archive(
+    http_archive(
         name = "arm_compiler",
         build_file = clean_dep("//thirdparty/toolchains/cpus/arm:arm_compiler.BUILD"),
         sha256 = "b9e7d50ffd9996ed18900d041d362c99473b382c0ae049b2fce3290632d2656f",

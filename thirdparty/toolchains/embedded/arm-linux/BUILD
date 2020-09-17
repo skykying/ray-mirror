@@ -80,8 +80,3 @@ toolchain(
     toolchain = ":cc-compiler-aarch64",
     toolchain_type = "@bazel_tools//tools/cpp:toolchain_type",
 )
-
-
-native.register_toolchains(
-    ":aarch64-linux-crosstool",
-)

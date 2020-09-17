@@ -322,3 +322,8 @@ def ray_deps_setup():
             "https://developer.arm.com/-/media/Files/downloads/gnu-a/8.3-2019.03/binrel/gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf.tar.xz",
         ],
     )
+
+
+    native.register_toolchains(
+        "//thirdparty/toolchains/embedded/arm-linux:aarch64-linux-crosstool",
+    )

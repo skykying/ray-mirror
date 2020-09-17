@@ -303,7 +303,7 @@ def ray_deps_setup():
 
     http_archive(
         name = "aarch64_linux_toolchain",
-        build_file = clean_dep("//thirdparty/toolchains/embedded/arm-linux:aarch64-linux-toolchain.BUILD"),
+        build_file = clean_dep("//thirdparty/toolchains/embedded/arm-linux/aarch64:aarch64-linux-toolchain.BUILD"),
         sha256 = "8ce3e7688a47d8cd2d8e8323f147104ae1c8139520eca50ccf8a7fa933002731",
         strip_prefix = "gcc-arm-8.3-2019.03-x86_64-aarch64-linux-gnu",
         urls = [
@@ -314,7 +314,7 @@ def ray_deps_setup():
 
     http_archive(
         name = "armhf_linux_toolchain",
-        build_file = clean_dep("//thirdparty/toolchains/embedded/arm-linux:armhf-linux-toolchain.BUILD"),
+        build_file = clean_dep("//thirdparty/toolchains/embedded/arm-linux/armhf:armhf-linux-toolchain.BUILD"),
         sha256 = "d4f6480ecaa99e977e3833cc8a8e1263f9eecd1ce2d022bb548a24c4f32670f5",
         strip_prefix = "gcc-arm-8.3-2019.03-x86_64-arm-linux-gnueabihf",
         urls = [

@@ -69,7 +69,7 @@ cc_toolchain(
 toolchain(
     name = "aarch64-linux-crosstool",
     exec_compatible_with = [
-        "@platforms//os:windows",
+        "@platforms//os:linux",
         "@platforms//cpu:x86_64",
     ],
     target_compatible_with = [

@@ -323,7 +323,7 @@ def ray_deps_setup():
         ],
     )
 
-def register_toolchains():
+def ray_register_toolchains():
     native.register_toolchains(
         "//thirdparty/toolchains/embedded/arm-linux:aarch64-linux-crosstool",
     )

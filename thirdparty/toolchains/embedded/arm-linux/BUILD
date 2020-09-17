@@ -1,8 +1,17 @@
+load(":armhf_linux_toolchain_configure.bzl", "arm_linux_toolchain_configure")
 load(":cc_config.bzl", "cc_toolchain_config")
 
 package(default_visibility = ["//visibility:public"])
 
 licenses(["restricted"])  # GPLv3
+
+# TFLite crossbuild toolchain for embeddeds Linux
+arm_linux_toolchain_configure(
+    name = "local_config_embedded_arm",
+    build_file = str(Label("//thirdparty/toolchains/embedded/arm-linux:BUILD")),
+    aarch64_repo = "../aarch64_linux_toolchain",
+    armhf_repo = "../armhf_linux_toolchain",
+)
 
 cc_toolchain_suite(
     name = "toolchain",
@@ -82,10 +91,3 @@ toolchain(
 )
 
 
-native.register_toolchains(
-        ":aarch64-linux-crosstool",
-        # "@arm_none_eabi//toolchain:linux_x86_64",
-        # "@arm_none_eabi//toolchain:linux_aarch64",
-        # "@arm_none_eabi//toolchain:windows_x86_32",
-        # "@arm_none_eabi//toolchain:windows_x86_64",
-)

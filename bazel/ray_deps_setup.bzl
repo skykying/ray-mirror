@@ -82,24 +82,6 @@ def auto_http_archive(*, name=None, url=None, urls=True,
                         strip_prefix=strip_prefix, **kwargs)
 
 def ray_deps_setup():
-
-    # Point //external/local_config_arm_compiler to //external/arm_compiler
-    arm_compiler_configure(
-        name = "local_config_arm_compiler",
-        build_file = clean_dep("//thirdparty/toolchains/cpus/arm:BUILD"),
-        remote_config_repo_arm = "../arm_compiler",
-        remote_config_repo_aarch64 = "../aarch64_compiler",
-    )
-
-      # TFLite crossbuild toolchain for embeddeds Linux
-    arm_linux_toolchain_configure(
-        name = "local_config_embedded_arm",
-        build_file = clean_dep("//thirdparty/toolchains/embedded/arm-linux:BUILD"),
-        aarch64_repo = "../aarch64_linux_toolchain",
-        armhf_repo = "../armhf_linux_toolchain",
-    )
-
-
     auto_http_archive(
         name = "com_github_antirez_redis",
         build_file = "//bazel:BUILD.redis",

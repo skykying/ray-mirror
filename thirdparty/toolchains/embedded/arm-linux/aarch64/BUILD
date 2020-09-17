@@ -25,7 +25,6 @@ filegroup(
     ],
 )
 
-
 cc_toolchain_aarch64_config(
     name = "aarch64_toolchain_config",
 )

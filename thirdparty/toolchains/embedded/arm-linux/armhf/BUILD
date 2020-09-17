@@ -24,11 +24,9 @@ filegroup(
     ],
 )
 
-
 cc_toolchain_armhf_config(
     name = "armhf_toolchain_config",
 )
-
 
 cc_toolchain(
     name = "cc-compiler-armhf",

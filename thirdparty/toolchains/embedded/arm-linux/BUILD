@@ -9,7 +9,7 @@ licenses(["restricted"])  # GPLv3
 cc_toolchain_suite(
     name = "toolchain",
     toolchains = {
-        "aarch64": ":cc-compiler-aarch64",
+        "k8": ":cc-compiler-aarch64",
         "armhf": ":cc-compiler-armhf",
     },
 )

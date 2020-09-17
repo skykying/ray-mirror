@@ -27,8 +27,8 @@ test:windows --enable_runfiles
 
 
 
-#build --incompatible_enable_cc_toolchain_resolution
-#build --platforms=@com_github_ray_project_ray//platforms:linux_aarch64
+build --incompatible_enable_cc_toolchain_resolution
+build --platforms=@com_github_ray_project_ray//platforms:linux_aarch64
 
 build:legacy --crosstool_top=//thirdparty/toolchains/embedded/arm-linux:toolchain
 build:legacy --host_crosstool_top=@bazel_tools//tools/cpp:toolchain

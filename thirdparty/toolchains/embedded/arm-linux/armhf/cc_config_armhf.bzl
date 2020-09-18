@@ -229,13 +229,13 @@ def _impl(ctx):
                         flag_group(
                             flags = [
                                 "-isystem",
-                                "../armhf_linux_toolchain/lib/gcc/arm-linux-gnueabihf/8.3.0/include",
+                                "external/armhf_linux_toolchain/lib/gcc/arm-linux-gnueabihf/8.3.0/include",
                                 "-isystem",
-                                "../armhf_linux_toolchain/lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed",
+                                "external/armhf_linux_toolchain/lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed",
                                 "-isystem",
-                                "../armhf_linux_toolchain/arm-linux-gnueabihf/include/c++/8.3.0/",
+                                "external/armhf_linux_toolchain/arm-linux-gnueabihf/include/c++/8.3.0/",
                                 "-isystem",
-                                "../armhf_linux_toolchain/arm-linux-gnueabihf/libc/usr/include/",
+                                "external/armhf_linux_toolchain/arm-linux-gnueabihf/libc/usr/include/",
                                 "-isystem",
                                 "/usr/include/python3.5",
                                 "-isystem",
@@ -324,10 +324,10 @@ def _impl(ctx):
 
 
     cxx_builtin_include_directories = [
-            "../armhf_linux_toolchain/lib/gcc/arm-linux-gnueabihf/8.3.0/include",
-            "../armhf_linux_toolchain/lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed",
-            "../armhf_linux_toolchain/arm-linux-gnueabihf/include/c++/8.3.0/",
-            "../armhf_linux_toolchain/arm-linux-gnueabihf/libc/usr/include/",
+            "external/armhf_linux_toolchain/lib/gcc/arm-linux-gnueabihf/8.3.0/include",
+            "external/armhf_linux_toolchain/lib/gcc/arm-linux-gnueabihf/8.3.0/include-fixed",
+            "external/armhf_linux_toolchain/arm-linux-gnueabihf/include/c++/8.3.0/",
+            "external/armhf_linux_toolchain/arm-linux-gnueabihf/libc/usr/include/",
             "/usr/include",
     ]
 
@@ -338,44 +338,44 @@ def _impl(ctx):
     tool_paths = [
             tool_path(
                 name = "ar",
-                path = "../armhf_linux_toolchain/bin/arm-linux-gnueabihf-ar",
+                path = "external/armhf_linux_toolchain/bin/arm-linux-gnueabihf-ar",
             ),
             tool_path(name = "compat-ld", path = "/bin/false"),
             tool_path(
                 name = "cpp",
-                path = "../armhf_linux_toolchain/bin/arm-linux-gnueabihf-cpp",
+                path = "external/armhf_linux_toolchain/bin/arm-linux-gnueabihf-cpp",
             ),
             tool_path(
                 name = "dwp",
-                path = "../armhf_linux_toolchain/bin/arm-linux-gnueabihf-dwp",
+                path = "external/armhf_linux_toolchain/bin/arm-linux-gnueabihf-dwp",
             ),
             tool_path(
                 name = "gcc",
-                path = "../armhf_linux_toolchain/bin/arm-linux-gnueabihf-gcc",
+                path = "external/armhf_linux_toolchain/bin/arm-linux-gnueabihf-gcc",
             ),
             tool_path(
                 name = "gcov",
-                path = "../armhf_linux_toolchain/bin/arm-linux-gnueabihf-gcov",
+                path = "external/armhf_linux_toolchain/bin/arm-linux-gnueabihf-gcov",
             ),
             tool_path(
                 name = "ld",
-                path = "../armhf_linux_toolchain/bin/arm-linux-gnueabihf-ld",
+                path = "external/armhf_linux_toolchain/bin/arm-linux-gnueabihf-ld",
             ),
             tool_path(
                 name = "nm",
-                path = "../armhf_linux_toolchain/bin/arm-linux-gnueabihf-nm",
+                path = "external/armhf_linux_toolchain/bin/arm-linux-gnueabihf-nm",
             ),
             tool_path(
                 name = "objcopy",
-                path = "../armhf_linux_toolchain/bin/arm-linux-gnueabihf-objcopy",
+                path = "external/armhf_linux_toolchain/bin/arm-linux-gnueabihf-objcopy",
             ),
             tool_path(
                 name = "objdump",
-                path = "../armhf_linux_toolchain/bin/arm-linux-gnueabihf-objdump",
+                path = "external/armhf_linux_toolchain/bin/arm-linux-gnueabihf-objdump",
             ),
             tool_path(
                 name = "strip",
-                path = "../armhf_linux_toolchain/bin/arm-linux-gnueabihf-strip",
+                path = "external/armhf_linux_toolchain/bin/arm-linux-gnueabihf-strip",
             ),
     ]
 

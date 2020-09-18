@@ -229,13 +229,13 @@ def _impl(ctx):
                         flag_group(
                             flags = [
                                 "-isystem",
-                                "../aarch64_linux_toolchain/lib/gcc/aarch64-linux-gnu/8.3.0/include",
+                                "external/aarch64_linux_toolchain/lib/gcc/aarch64-linux-gnu/8.3.0/include",
                                 "-isystem",
-                                "../aarch64_linux_toolchain/lib/gcc/aarch64-linux-gnu/8.3.0/include-fixed",
+                                "external/aarch64_linux_toolchain/lib/gcc/aarch64-linux-gnu/8.3.0/include-fixed",
                                 "-isystem",
-                                "../aarch64_linux_toolchain/aarch64-linux-gnu/include/c++/8.3.0/",
+                                "external/aarch64_linux_toolchain/aarch64-linux-gnu/include/c++/8.3.0/",
                                 "-isystem",
-                                "../aarch64_linux_toolchain/aarch64-linux-gnu/libc/usr/include/",
+                                "external/aarch64_linux_toolchain/aarch64-linux-gnu/libc/usr/include/",
                                 "-isystem",
                                 "/usr/include/python3.5",
                                 "-isystem",
@@ -323,10 +323,10 @@ def _impl(ctx):
 
 
     cxx_builtin_include_directories = [
-                "../aarch64_linux_toolchain/lib/gcc/aarch64-linux-gnu/8.3.0/include",
-                "../aarch64_linux_toolchain/lib/gcc/aarch64-linux-gnu/8.3.0/include-fixed",
-                "../aarch64_linux_toolchain/aarch64-linux-gnu/include/c++/8.3.0/",
-                "../aarch64_linux_toolchain/aarch64-linux-gnu/libc/usr/include/",
+                "external/aarch64_linux_toolchain/lib/gcc/aarch64-linux-gnu/8.3.0/include",
+                "external/aarch64_linux_toolchain/lib/gcc/aarch64-linux-gnu/8.3.0/include-fixed",
+                "external/aarch64_linux_toolchain/aarch64-linux-gnu/include/c++/8.3.0/",
+                "external/aarch64_linux_toolchain/aarch64-linux-gnu/libc/usr/include/",
                 "/usr/include",
     ]
 
@@ -339,44 +339,44 @@ def _impl(ctx):
     tool_paths = [
             tool_path(
                 name = "ar",
-                path = "../aarch64_linux_toolchain/bin/aarch64-linux-gnu-ar",
+                path = "external/aarch64_linux_toolchain/bin/aarch64-linux-gnu-ar",
             ),
             tool_path(name = "compat-ld", path = "/bin/false"),
             tool_path(
                 name = "cpp",
-                path = "../aarch64_linux_toolchain/bin/aarch64-linux-gnu-cpp",
+                path = "external/aarch64_linux_toolchain/bin/aarch64-linux-gnu-cpp",
             ),
             tool_path(
                 name = "dwp",
-                path = "../aarch64_linux_toolchain/bin/aarch64-linux-gnu-dwp",
+                path = "external/aarch64_linux_toolchain/bin/aarch64-linux-gnu-dwp",
             ),
             tool_path(
                 name = "gcc",
-                path = "../aarch64_linux_toolchain/bin/aarch64-linux-gnu-gcc",
+                path = "external/aarch64_linux_toolchain/bin/aarch64-linux-gnu-gcc",
             ),
             tool_path(
                 name = "gcov",
-                path = "../aarch64_linux_toolchain/bin/aarch64-linux-gnu-gcov",
+                path = "external/aarch64_linux_toolchain/bin/aarch64-linux-gnu-gcov",
             ),
             tool_path(
                 name = "ld",
-                path = "../aarch64_linux_toolchain/bin/aarch64-linux-gnu-ld",
+                path = "external/aarch64_linux_toolchain/bin/aarch64-linux-gnu-ld",
             ),
             tool_path(
                 name = "nm",
-                path = "../aarch64_linux_toolchain/bin/aarch64-linux-gnu-nm",
+                path = "external/aarch64_linux_toolchain/bin/aarch64-linux-gnu-nm",
             ),
             tool_path(
                 name = "objcopy",
-                path = "../aarch64_linux_toolchain/bin/aarch64-linux-gnu-objcopy",
+                path = "external/aarch64_linux_toolchain/bin/aarch64-linux-gnu-objcopy",
             ),
             tool_path(
                 name = "objdump",
-                path = "../aarch64_linux_toolchain/bin/aarch64-linux-gnu-objdump",
+                path = "external/aarch64_linux_toolchain/bin/aarch64-linux-gnu-objdump",
             ),
             tool_path(
                 name = "strip",
-                path = "../aarch64_linux_toolchain/bin/aarch64-linux-gnu-strip",
+                path = "external/aarch64_linux_toolchain/bin/aarch64-linux-gnu-strip",
             ),
     ]
 

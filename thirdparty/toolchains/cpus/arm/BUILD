@@ -1,20 +1,10 @@
 package(default_visibility = ["//visibility:public"])
 
-load(":arm_compiler_configure.bzl", "arm_compiler_configure")
-
 # The following line is only here to make this project import into IDEs that embed
 # a Bazel toolchain.
 licenses(["notice"])
 
 load(":cc_config.bzl", "cc_toolchain_config")
-
-# Point //external/local_config_arm_compiler to //external/arm_compiler
-arm_compiler_configure(
-    name = "local_config_arm_compiler",
-    build_file = clean_dep("//thirdparty/toolchains/cpus/arm:BUILD"),
-    remote_config_repo_arm = "../arm_compiler",
-    remote_config_repo_aarch64 = "../aarch64_compiler",
-)
 
 cc_toolchain_suite(
     name = "toolchain",

@@ -26,7 +26,7 @@ fi
 
 TEMPDIR="$(mktemp -d)"
 ROOT="${PWD}"
-PKG="third_party/toolchains/preconfig"
+PKG="thirdparty/toolchains/preconfig"
 IFS='-' read -ra PLATFORM <<< "${TARGET}"
 OS="${PLATFORM[0]}"
 PY_VERSION="${PLATFORM[1]}"
